@@ -1,4 +1,4 @@
-name: COBOL to Python Conversion (feature test)
+name: COBOL_to_Python_Conversion
 
 on:
   workflow_dispatch:
