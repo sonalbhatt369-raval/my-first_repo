@@ -1,4 +1,4 @@
-name: COBOL to Python Conversion (feature branch)
+name: COBOL to Python Conversion (feature test)
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ jobs:
         with:
           oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           instructions: |
-            Read cobol_test1.cob from the repo.
-            Convert COBOL logic to Python.
-            Create python_test1.py with the converted code.
-            Commit and push the new python_file.py.
+            Read src/hello.cob.
+            Convert its logic to Python.
+            Create src/hello.py with equivalent Python code.
+            Commit and push src/hello.py to this branch.
