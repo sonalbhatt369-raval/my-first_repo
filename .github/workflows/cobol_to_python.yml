@@ -1,0 +1,21 @@
+name: COBOL to Python Conversion (feature branch)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run Claude Code
+        uses: anthropic/claude-code@v1
+        with:
+          oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          instructions: |
+            Read cobol_test1.cob from the repo.
+            Convert COBOL logic to Python.
+            Create python_test1.py with the converted code.
+            Commit and push the new python_file.py.
